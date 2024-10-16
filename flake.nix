@@ -14,9 +14,13 @@
 
       devShells.x86_64-linux.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
-            nodejs
+            nodejs_22
             pnpm
           ];
+
+          shellHook = ''
+            echo "Node.js $(node --version) and pnpm $(pnpm --version) are ready!"
+          '';
         };
 
     };
