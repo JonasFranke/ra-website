@@ -8,6 +8,10 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      backgroundImage: {
+        'mf5': "url('/cropped-maren-franke5.jpg')",
+        'mf7': "url('/maren-franke7.webp')"
+      },
     },
   },
   plugins: [],
