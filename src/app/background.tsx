@@ -7,7 +7,7 @@ type BackgroundProps = {
 
 function BackgroundComponent({ bgImgId, children }: BackgroundProps) {
 
-  const bgImgClass: string = `bg-mf${bgImgId}`;
+  const bgImgClass: string = `bg-mf${bgImgId.toString()}`;
 
   return (
     <div className={`relative h-screen bg-fixed bg-center bg-cover ${bgImgClass}`} >
