@@ -1,21 +1,15 @@
-import Image from "next/image";
+import BackgroundComponent from "./background"
 
 export default function HomePage() {
   return (
     <div>
-      <div className="relative h-screen bg-fixed bg-center bg-cover bg-mf5">
-        <div className="h-full flex items-center justify-center">
-        </div>
-      </div>
-      <div className="h-screen">
+      <BackgroundComponent bgImgId={5}>
+        <h1 className="text-white text-6xl drop-shadow-lg">Raumausstattung Franke</h1>
+      </BackgroundComponent>
+      <section className="h-screen bg-white ">
         <p>lorem ipsum dolor sit amet</p>
-      </div>
-      <div className="relative h-screen bg-fixed bg-center bg-cover bg-mf7">
-        <div className="h-full flex items-center justify-center">
-          <h2>Hallo Welt!</h2>
-          <p>Dies ist eine coole Seite!</p>
-        </div>
-      </div>
+      </section>
+      <BackgroundComponent bgImgId={7} />
     </div>
   );
 }
