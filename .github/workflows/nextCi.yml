@@ -12,18 +12,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/Checkout@v4.2.1
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.0.0
         with:
-          version: 9.12.2
           run_install: false
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.9.0
           cache: 'pnpm'
+
       - name: Install dependecies
         run: pnpm install
+
       - name: Build next.js app
         run: pnpm run build
 
