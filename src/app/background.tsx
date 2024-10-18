@@ -1,5 +1,3 @@
-import type React from "react";
-
 type BackgroundProps = {
   bgImgUrl: string;
   children?: React.ReactNode;
