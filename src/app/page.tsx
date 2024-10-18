@@ -3,9 +3,9 @@ import BackgroundComponent from "./background"
 export default function HomePage() {
   return (
     <>
-      <BackgroundComponent bgImgId={5}>
+      <BackgroundComponent bgImgUrl="/cropped-maren-franke5.jpg">
         <h1 className="text-white text-5xl drop-shadow-lg uppercase">Raumausstattung Franke</h1>
-      </BackgroundComponent>
+      </BackgroundComponent >
       <section className="h-screen bg-white">
         <div className="flex flex-row p-10 py-20">
           <h1 className="uppercase text-gray-500 text-xl basis-1/2">
@@ -47,7 +47,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <BackgroundComponent bgImgId={7} />
+      <BackgroundComponent bgImgUrl="maren-franke7.webp" />
       <section className="h-screen bg-white">
         <div className="flex flex-row py-20 p-10">
           <div className="basis-1/2" />

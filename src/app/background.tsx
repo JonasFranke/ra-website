@@ -1,16 +1,14 @@
 import type React from "react";
 
 type BackgroundProps = {
-  bgImgId: number;
+  bgImgUrl: string;
   children?: React.ReactNode;
 }
 
-function BackgroundComponent({ bgImgId, children }: BackgroundProps) {
-
-  const bgImgClass: string = `bg-mf${bgImgId.toString()}`;
+function BackgroundComponent({ bgImgUrl, children }: BackgroundProps) {
 
   return (
-    <div className={`relative h-screen bg-fixed bg-center bg-cover ${bgImgClass}`} >
+    <div className={`relative h-screen bg-fixed bg-center bg-cover`} style={{ backgroundImage: `url(${bgImgUrl})` }}>
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       <div className="h-full flex items-end p-6">
         {children}
