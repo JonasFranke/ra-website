@@ -4,14 +4,14 @@ export default function HomePage() {
   return (
     <>
       <BackgroundComponent bgImgUrl="/cropped-maren-franke5.jpg">
-        <h1 className="text-white text-5xl drop-shadow-lg uppercase">Raumausstattung Franke</h1>
+        <h1 className="text-white text-5xl drop-shadow-lg uppercase hyphens-manual">Raumaus&shy;stattung Franke</h1>
       </BackgroundComponent >
-      <section className="h-screen bg-white">
-        <div className="flex flex-row p-10 py-20">
-          <h1 className="uppercase text-gray-500 text-xl basis-1/2">
+      <section className="md:h-screen sm:h-min bg-white">
+        <div className="md:flex md:flex-row p-10 py-20">
+          <h1 className="uppercase text-gray-500 text-xl md:basis-1/2">
             Willkommen
           </h1>
-          <div className="basis-1/3">
+          <div className="md:basis-1/3">
             <p className="text-balance">
               Herzlich Willkommen auf den Seiten der Raumausstatterin
               Maren Franke in Bremen–Borgfeld.
@@ -48,13 +48,23 @@ export default function HomePage() {
         </div>
       </section>
       <BackgroundComponent bgImgUrl="maren-franke7.webp" />
-      <section className="h-screen bg-white">
-        <div className="flex flex-row py-20 p-10">
-          <div className="basis-1/2" />
-          <div className="basis-1/3">
+      <section className="md:h-screen sm:h-min bg-white">
+        <div className="md:flex md:flex-row py-20 p-10">
+          <div className="md:basis-1/2" />
+          <div className="md:basis-1/3">
             <p className="text-balance">
               Lesen Sie mehr über mich im <a href="http://horner-magazin.de/2019-02/" className="underline underline-offset-1">Horner Magazin</a> ab Seite 46.
             </p>
+            <div className="md:grid md:grid-flow-row-dense md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
+              <img src="https://www.christianfischbacher.com/ch/en/skin/frontend/digitalhome/christianfischbacher_ch_en/images/LOGO_YD_desktop.svg"
+                className="md:w-full sm:w-1/2 p-2" />
+              <img src="https://www.teba.de/images/teba_logo.svg"
+                className="md:w-full sm:w-1/2 p-2" />
+              <img src="https://www.heco-textilverlag.com/themes/Frontend/SaumViebahn/frontend/_public/src/img/logos/HECO_LOGO_dunkelgrau_bronze_dunkel.png"
+                className="md:w-full sm:w-1/2 p-2" />
+              <img src="https://www.ado-goldkante.de/typo3conf/ext/ado_goldkante/Resources/Public/Images/ado-logo.png"
+                className="md:w-full sm:w-1/2 p-2" />
+            </div>
           </div>
         </div>
       </section>
