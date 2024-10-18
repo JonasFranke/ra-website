@@ -1,4 +1,5 @@
 import BackgroundComponent from "./background"
+import FooterComponent from "./footer";
 
 export default function HomePage() {
   return (
@@ -68,6 +69,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <FooterComponent />
     </>
   );
 }
