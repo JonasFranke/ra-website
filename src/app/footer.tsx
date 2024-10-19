@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 const FooterComponent: FC = () => {
   return (
-    <footer className="flex md:flex-row sm:flex-col sm:content-evenly sm:gap-x-2 px-20 py-10 bg-gray-200">
+    <footer className="flex md:flex-row sm:flex-col sm:content-evenly sm:gap-x-2 px-20 py-10 bg-gray-200 dark:bg-gray-900 dark:text-gray-200">
       <div className="md:basis-1/5" />
       <div className="md:basis-1/5">
         <h1 className="uppercase font-mono pb-2">

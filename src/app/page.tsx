@@ -7,9 +7,9 @@ export default function HomePage() {
       <BackgroundComponent bgImgUrl="/cropped-maren-franke5.jpg">
         <h1 className="text-white text-5xl drop-shadow-lg uppercase hyphens-manual">Raumaus&shy;stattung Franke</h1>
       </BackgroundComponent >
-      <section className="md:h-screen sm:h-min bg-white">
+      <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
         <div className="md:flex md:flex-row p-10 py-20">
-          <h1 className="uppercase text-gray-500 text-xl md:basis-1/2">
+          <h1 className="uppercase text-gray-500 dark:text-gray-400 text-xl md:basis-1/2 md:px-20">
             Willkommen
           </h1>
           <div className="md:basis-1/3">
@@ -49,14 +49,14 @@ export default function HomePage() {
         </div>
       </section>
       <BackgroundComponent bgImgUrl="maren-franke7.webp" />
-      <section className="md:h-screen sm:h-min bg-white">
+      <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
         <div className="md:flex md:flex-row py-20 p-10">
           <div className="md:basis-1/2" />
           <div className="md:basis-1/3">
             <p className="text-balance">
               Lesen Sie mehr über mich im <a href="http://horner-magazin.de/2019-02/" className="underline underline-offset-1">Horner Magazin</a> ab Seite 46.
             </p>
-            <div className="md:grid md:grid-flow-row-dense md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
+            <div className="dark:bg-slate-100 md:grid md:grid-flow-row-dense md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
               <img src="https://www.christianfischbacher.com/ch/en/skin/frontend/digitalhome/christianfischbacher_ch_en/images/LOGO_YD_desktop.svg"
                 className="md:w-full sm:w-1/2 p-2" />
               <img src="https://www.teba.de/images/teba_logo.svg"
