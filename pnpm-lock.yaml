@@ -36,7 +36,7 @@ importers:
         version: 1.9.4
       '@types/node':
         specifier: ^22.0.0
-        version: 22.9.0
+        version: 22.9.1
       '@types/react':
         specifier: npm:types-react@19.0.0-rc.1
         version: types-react@19.0.0-rc.1
@@ -333,8 +333,8 @@ packages:
       typescript:
         optional: true
 
-  '@types/node@22.9.0':
-    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
+  '@types/node@22.9.1':
+    resolution: {integrity: sha512-p8Yy/8sw1caA8CdRIQBG5tiLHmxtQKObCijiAa9Ez+d4+PRffM4054xbju0msf+cvhJpnFEeNjxmVT/0ipktrg==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1037,7 +1037,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
-  '@types/node@22.9.0':
+  '@types/node@22.9.1':
     dependencies:
       undici-types: 6.19.8
 
