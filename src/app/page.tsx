@@ -6,7 +6,7 @@ import FooterComponent from "./footer";
 export default function HomePage() {
   return (
     <>
-      <BackgroundComponent bgImgUrl="/cropped-maren-franke5.jpg">
+      <BackgroundComponent bgImgUrl="/cropped-maren-franke5.webp">
         <h1 className="text-white text-5xl drop-shadow-lg uppercase hyphens-manual">
           Raumaus&shy;stattung Franke
         </h1>
