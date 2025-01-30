@@ -11,22 +11,26 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/Checkout@v4.2.1
+        uses: actions/Checkout@v4.2.2
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4.0.0
-        with:
-          run_install: false
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/cache@v4
         with:
-          node-version: 22.9.0
-          cache: 'pnpm'
+          path: |
+            ~/.bun/install/cache
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
 
       - name: Install dependecies
-        run: pnpm install
+        run: bun install
 
       - name: Build next.js app
-        run: pnpm run build
+        run: bun run build
 
