@@ -1,5 +1,5 @@
 {
-  description = "Node.js dev env";
+  description = "Bun dev env";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
