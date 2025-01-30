@@ -1,8 +1,8 @@
 export default function WelcomeComponent() {
   return (
-    <section className="md:h-screen sm:h-min bg-white">
+    <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
       <div className="md:flex md:flex-row p-10 py-20">
-        <h1 className="uppercase text-gray-500 text-xl md:basis-1/2">
+        <h1 className="uppercase text-gray-500 text-xl md:basis-1/2 dark:text-gray-400">
           Willkommen
         </h1>
         <div className="md:basis-1/3">
