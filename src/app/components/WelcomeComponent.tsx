@@ -7,14 +7,14 @@ export default function WelcomeComponent() {
         </h1>
         <div className="md:basis-1/3">
           <p className="text-balance">
-            Herzlich Willkommen auf den Seiten der Raumausstatterin Maren
-            Franke in Bremen–Borgfeld.
+            Herzlich Willkommen auf den Seiten der Raumausstatterin Maren Franke
+            in Bremen–Borgfeld.
           </p>
           <br />
           <p className="text-balance">
             Ich bin Maren Franke, Raumausstatterin seit über 25 Jahren, und
-            fertige in meinem Nähatelier an der Lilienthaler Heerstraße alles
-            in Handarbeit.
+            fertige in meinem Nähatelier an der Lilienthaler Heerstraße alles in
+            Handarbeit.
           </p>
           <br />
           <p className="text-balance">
@@ -59,5 +59,5 @@ export default function WelcomeComponent() {
         </div>
       </div>
     </section>
-  )
+  );
 }

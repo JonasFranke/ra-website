@@ -1,11 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --background-image-mf5: url('/cropped-maren-franke5.jpg');
-  --background-image-mf7: url('/maren-franke7.webp');
+  --background-image-mf5: url("/cropped-maren-franke5.jpg");
+  --background-image-mf7: url("/maren-franke7.webp");
 }
 
 /*
