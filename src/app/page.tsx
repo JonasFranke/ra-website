@@ -1,7 +1,7 @@
 import BackgroundComponent from "./background";
-import FooterComponent from "./footer";
-import WelcomeComponent from "./components/WelcomeComponent";
 import SuppliersComponent from "./components/SuppliersComponents";
+import WelcomeComponent from "./components/WelcomeComponent";
+import FooterComponent from "./footer";
 
 export default function HomePage() {
   return (
