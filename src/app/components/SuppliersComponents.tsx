@@ -1,6 +1,19 @@
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function SuppliersComponent() {
+  useEffect(() => {
+    const selectedTheme = localStorage.getItem("theme");
+    if (selectedTheme) {
+      document.body.classList.add(selectedTheme);
+    } else if (window.matchMedia("(prefers-color-schema: dark)").matches) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.add("dark");
+    }
+  }, [localStorage])
+
   return (
     <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
       <div className="md:flex md:flex-row py-20 p-10">
