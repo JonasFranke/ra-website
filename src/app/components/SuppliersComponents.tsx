@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SuppliersComponent() {
   return (
-    <section className="md:h-screen sm:h-min bg-white">
+    <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
       <div className="md:flex md:flex-row py-20 p-10">
         <div className="md:basis-1/2" />
         <div className="md:basis-1/3">
@@ -16,7 +16,7 @@ export default function SuppliersComponent() {
             </a>{" "}
             ab Seite 46.
           </p>
-          <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
+          <div className="dark:bg-slate-100 md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
             <div className="md:w-full sm:w-1/2 h-32 p-4 relative">
               <Image
                 src="https://www.christianfischbacher.com/ch/en/skin/frontend/digitalhome/christianfischbacher_ch_en/images/LOGO_YD_desktop.svg"

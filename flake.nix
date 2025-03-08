@@ -15,6 +15,7 @@
       devShells.x86_64-linux.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
             bun
+            nodejs_23
           ];
 
           shellHook = ''
