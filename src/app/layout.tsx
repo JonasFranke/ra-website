@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import type { Metadata } from "next";
+import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Raumausstattung Franke",
@@ -12,8 +13,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={""}>
-      <body>{children}</body>
+    <html lang="de" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
