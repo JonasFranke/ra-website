@@ -3,23 +3,26 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    biomepkg.url = "github:isabelroses/nixpkgs/biome-2";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs = { self, nixpkgs, biomepkg, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      biome = biomepkg.legacyPackages.${system};
     in
     {
 
       devShells.x86_64-linux.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            bun
-            nodejs_23
+          nativeBuildInputs = [
+            pkgs.bun
+            pkgs.nodejs_23
+            biome.biome
           ];
 
           shellHook = ''
-            echo "Bun $(bun --version) is ready!"
+            echo "Bun $(bun --version) and Biome $(biome --version) are ready!"
           '';
         };
 
