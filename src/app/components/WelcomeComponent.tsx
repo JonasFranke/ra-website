@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 export default function WelcomeComponent() {
   return (
-    <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
+    <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
       <div className="md:flex md:flex-row p-10 py-20">
         <h1 className="uppercase text-gray-500 text-xl md:basis-1/2 dark:text-gray-400">
           Alles aus einer Hand – vom Aufmaß bis zur fertigen Dekoration Ihres
@@ -13,6 +14,7 @@ export default function WelcomeComponent() {
             Ich bin Maren Franke, Raumausstatterin seit fast 30 Jahren, und
             fertige in meinem eigenen Nähatelier alles in Handarbeit an.
           </p>
+          <Button className="my-3"><a href="mailto:info@raumausstattung-franke.com">Kontakt aufnehmen</a></Button>
           <br />
           <p className="text-balance font-bold">
             Handwerkliche Perfektion – individuell und maßgefertigt
