@@ -3,6 +3,7 @@ import DarkModeToggleButtonComponent from "./components/DarkModeToggleButton";
 import { ScrollDownButton } from "./components/ScrollDownButton";
 import SuppliersComponent from "./components/SuppliersComponents";
 import WelcomeComponent from "./components/WelcomeComponent";
+import ContactComponent from "./components/ContactComponent";
 import FooterComponent from "./footer";
 
 export default function HomePage() {
@@ -21,7 +22,10 @@ export default function HomePage() {
       </section>
       <section id="content">
         <WelcomeComponent />
+        <hr />
         <SuppliersComponent />
+        <hr />
+        <ContactComponent />
       </section>
       <FooterComponent />
     </>
