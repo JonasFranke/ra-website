@@ -17,13 +17,13 @@ export default function SuppliersComponent() {
             <Carousel>
               <CarouselContent>
                 {suppliers.map((image, index) => (
-                  <CarouselItem key={index}>
+                  <CarouselItem key={index} className="dark:bg-slate-100 ">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       width={5000}
                       height={5000}
-                      className="aspect-auto"
+                      className="w-100"
                     />
                   </CarouselItem>
                 ))}
