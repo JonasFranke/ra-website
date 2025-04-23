@@ -1,12 +1,34 @@
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 export default function SuppliersComponent() {
   const suppliers = [
-    { src: "/ado_goldkante_black.png", alt: "Ado", url: "https://www.ado-goldkante.de/" },
-    { src: "/fischbacher1819_logotype_main_rgb_white.jpg", alt: "Fischbacher", url: "https://fischbacher1819.com/de/" },
-    { src: "/teba-lifestyle-am-fenster.jpg", alt: "Teba", url: "https://www.teba.de/" },
-    { src: "/logo-textilverlag.jpg", alt: "GEOS", url: "https://geos-geilfuss.de/" },
+    {
+      src: "/ado_goldkante_black.png",
+      alt: "Ado",
+      url: "https://www.ado-goldkante.de/",
+    },
+    {
+      src: "/fischbacher1819_logotype_main_rgb_white.jpg",
+      alt: "Fischbacher",
+      url: "https://fischbacher1819.com/de/",
+    },
+    {
+      src: "/teba-lifestyle-am-fenster.jpg",
+      alt: "Teba",
+      url: "https://www.teba.de/",
+    },
+    {
+      src: "/logo-textilverlag.jpg",
+      alt: "GEOS",
+      url: "https://geos-geilfuss.de/",
+    },
     { src: "/image001.jpg", alt: "Sonnhaus", url: "https://www.sonnhaus.de/" },
   ];
   return (

@@ -1,8 +1,8 @@
 import { Tailwind } from "@react-email/components";
 
 interface EmailTemplateProps {
-  name: string,
-  message: string,
+  name: string;
+  message: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({

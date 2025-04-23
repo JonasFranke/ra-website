@@ -1,14 +1,17 @@
-import { z } from "zod";
 import { Resend } from "resend";
-import { env } from "~/env";
+import { z } from "zod";
 import { EmailTemplate } from "~/app/components/emails/EmailTemplate";
+import { env } from "~/env";
 
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Name ist erforderlich" }),
   email: z.string().email({ message: "Ungültige E-Mail-Adresse" }),
-  message: z.string().min(1, { message: "Nachricht ist erforderlich" }).max(512, { message: "Nachricht darf maximal 512 Zeichen lang sein" })
+  message: z
+    .string()
+    .min(1, { message: "Nachricht ist erforderlich" })
+    .max(512, { message: "Nachricht darf maximal 512 Zeichen lang sein" }),
 });
 
 export async function POST(request: Request) {
@@ -21,7 +24,10 @@ export async function POST(request: Request) {
       to: ["jfhb06@gmail.com"],
       replyTo: validatedData.email,
       subject: "Anfrage auf der Website",
-      react: EmailTemplate({ name: validatedData.name, message: validatedData.message })
+      react: EmailTemplate({
+        name: validatedData.name,
+        message: validatedData.message,
+      }),
     });
 
     if (error) {
@@ -31,7 +37,9 @@ export async function POST(request: Request) {
     return new Response("E-Mail successfully sent!", { status: 200 });
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return new Response(JSON.stringify({ message: error.errors }), { status: 422 });
+      return new Response(JSON.stringify({ message: error.errors }), {
+        status: 422,
+      });
     }
   }
 }
