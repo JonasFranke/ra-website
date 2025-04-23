@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
+import { toast } from "sonner";
+import { Toaster } from "./ui/sonner";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Name ist erforderlich" }),
@@ -25,8 +27,12 @@ export default function ContactComponent() {
     }
   });
 
-  const onSubmit = (data: ContactFormValues) => {
+  const onSubmit = async (data: ContactFormValues) => {
     console.log("Form submitted:", data);
+    const req = await fetch("/api/contactform", { method: "POST", body: JSON.stringify(data) });
+    if (req.ok) {
+      toast("Nachricht wurde erforderlich gesendet!");
+    }
   }
 
   return (
@@ -89,6 +95,7 @@ export default function ContactComponent() {
           </Form>
         </div>
       </div>
+      <Toaster />
     </section>
   );
 }
