@@ -16,6 +16,7 @@
           nativeBuildInputs = with pkgs; [
             bun
             nodejs_23
+            ffmpeg
           ];
 
           shellHook = ''
