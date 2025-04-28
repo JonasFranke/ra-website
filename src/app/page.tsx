@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       <DarkModeToggleButtonComponent />
       <section className="relative min-h-screen">
-        <BackgroundComponent bgImgUrl="/cropped-maren-franke-1-quer-web.jpg">
+        <BackgroundComponent bgImgUrl="/cropped-maren-franke-1-quer-web.webp">
           <h1 className="text-white text-5xl drop-shadow-lg uppercase hyphens-manual">
             Raumaus&shy;stattung Franke
           </h1>

@@ -7,7 +7,8 @@
     "build": "next build",
     "dev": "next dev --turbo",
     "lint": "biome lint",
-    "start": "next start"
+    "start": "next start",
+    "report": "lighthouse http://127.0.0.1:3000 --view"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -37,6 +38,7 @@
     "@types/bun": "^1.2.4",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
+    "lighthouse": "^12.6.0",
     "postcss": "^8.4.47",
     "react-email": "4.0.7",
     "tailwindcss": "4.1.4",
