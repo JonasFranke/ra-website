@@ -10,26 +10,26 @@ import {
 export default function SuppliersComponent() {
   const suppliers = [
     {
-      src: "/ado_goldkante_black.png",
+      src: "/resized/ado_goldkante_black.png",
       alt: "Ado",
       url: "https://www.ado-goldkante.de/",
     },
     {
-      src: "/fischbacher1819_logotype_main_rgb_white.jpg",
+      src: "/resized/fischbacher1819_logotype_main_rgb_white.png",
       alt: "Fischbacher",
       url: "https://fischbacher1819.com/de/",
     },
     {
-      src: "/teba-lifestyle-am-fenster.jpg",
+      src: "/resized/teba-lifestyle-am-fenster.png",
       alt: "Teba",
       url: "https://www.teba.de/",
     },
     {
-      src: "/logo-textilverlag.jpg",
+      src: "/resized/logo-textilverlag.png",
       alt: "GEOS",
       url: "https://geos-geilfuss.de/",
     },
-    { src: "/image001.jpg", alt: "Sonnhaus", url: "https://www.sonnhaus.de/" },
+    { src: "/resized/image001.png", alt: "Sonnhaus", url: "https://www.sonnhaus.de/" },
   ];
   return (
     <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
@@ -39,7 +39,7 @@ export default function SuppliersComponent() {
           Meine Partner
         </h1>
         <div className="md:basis-1/2">
-          <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
+          <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10 sm:mx-4 md:mx-2">
             <Carousel>
               <CarouselContent>
                 {suppliers.map((image, index) => (
@@ -48,8 +48,9 @@ export default function SuppliersComponent() {
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        width={300}
-                        height={1}
+                        width={800}
+                        height={600}
+                        loading="lazy"
                       />
                     </a>
                   </CarouselItem>
