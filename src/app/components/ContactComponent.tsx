@@ -1,8 +1,11 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Turnstile } from "next-turnstile";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
+import { env } from "~/env";
 import { Button } from "./ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
 import { Input } from "./ui/input";
@@ -21,6 +24,7 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 export default function ContactComponent() {
+  const [token, setToken] = useState<string>();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -31,10 +35,14 @@ export default function ContactComponent() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    console.log("Form submitted:", data);
+    const dataWithToken = { ...data, token };
+    console.log("Form submitted:", dataWithToken);
     const req = await fetch("/api/contactform", {
       method: "POST",
-      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataWithToken),
     });
     if (req.ok) {
       toast("Nachricht wurde erforderlich gesendet!");
@@ -107,7 +115,13 @@ export default function ContactComponent() {
                   )}
                 />
               </div>
-              <Button type="submit" className="my-2">
+              <Turnstile
+                siteKey="3x00000000000000000000FF"
+                onVerify={setToken}
+                className="my-2"
+                sandbox={true}
+              />
+              <Button type="submit" disabled={!token}>
                 Senden
               </Button>
             </form>

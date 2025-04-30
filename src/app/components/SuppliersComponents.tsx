@@ -29,7 +29,11 @@ export default function SuppliersComponent() {
       alt: "GEOS",
       url: "https://geos-geilfuss.de/",
     },
-    { src: "/resized/image001.png", alt: "Sonnhaus", url: "https://www.sonnhaus.de/" },
+    {
+      src: "/resized/image001.png",
+      alt: "Sonnhaus",
+      url: "https://www.sonnhaus.de/",
+    },
   ];
   return (
     <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">

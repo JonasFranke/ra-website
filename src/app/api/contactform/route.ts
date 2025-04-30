@@ -1,3 +1,4 @@
+import { validateTurnstileToken } from "next-turnstile";
 import { Resend } from "resend";
 import { z } from "zod";
 import { EmailTemplate } from "~/app/components/emails/EmailTemplate";
@@ -12,6 +13,7 @@ const contactSchema = z.object({
     .string()
     .min(1, { message: "Nachricht ist erforderlich" })
     .max(512, { message: "Nachricht darf maximal 512 Zeichen lang sein" }),
+  token: z.string(),
 });
 
 export async function POST(request: Request) {
@@ -19,22 +21,33 @@ export async function POST(request: Request) {
     const unvalidatedData = await request.json();
     const validatedData = contactSchema.parse(unvalidatedData);
 
-    const { data, error } = await resend.emails.send({
-      from: "no-reply@jonasfranke.xyz",
-      to: ["jfhb06@gmail.com"],
-      replyTo: validatedData.email,
-      subject: "Anfrage auf der Website",
-      react: EmailTemplate({
-        name: validatedData.name,
-        message: validatedData.message,
-      }),
+    const turnstileResult = await validateTurnstileToken({
+      token: validatedData.token,
+      secretKey: env.TURNSTILE_SECRET_KEY,
     });
 
-    if (error) {
-      console.error("Error sending email:", error);
-      return new Response("Error sending email", { status: 500 });
+    if (turnstileResult.success) {
+      const { data, error } = await resend.emails.send({
+        from: "no-reply@jonasfranke.xyz",
+        to: ["jfhb06@gmail.com"],
+        replyTo: validatedData.email,
+        subject: "Anfrage auf der Website",
+        react: EmailTemplate({
+          name: validatedData.name,
+          message: validatedData.message,
+        }),
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        return new Response("Error sending email", { status: 500 });
+      }
+      return new Response("E-Mail successfully sent!", { status: 200 });
+    } else {
+      return new Response("Error during turnstile token validation", {
+        status: 401,
+      });
     }
-    return new Response("E-Mail successfully sent!", { status: 200 });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return new Response(JSON.stringify({ message: error.errors }), {
