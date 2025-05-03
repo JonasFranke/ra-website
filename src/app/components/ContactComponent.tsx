@@ -121,7 +121,11 @@ export default function ContactComponent() {
                 siteKey="3x00000000000000000000FF"
                 onVerify={setToken}
                 className="my-2"
-                sandbox="pass-invisible"
+                sandbox={
+                  env.NEXT_PUBLIC_NODE_ENV === "development"
+                    ? "pass-invisible"
+                    : false
+                }
               />
               <Button type="submit" disabled={!token}>
                 Senden

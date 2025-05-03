@@ -21,9 +21,12 @@ export async function POST(request: Request) {
     const unvalidatedData = await request.json();
     const validatedData = contactSchema.parse(unvalidatedData);
 
+    const sandbox = env.NODE_ENV === "development" ? "pass" : false;
+
     const turnstileResult = await validateTurnstileToken({
       token: validatedData.token,
       secretKey: env.TURNSTILE_SECRET_KEY,
+      sandbox: sandbox,
     });
 
     if (turnstileResult.success) {
