@@ -31,5 +31,6 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build next.js app
+        run: bun run build
         env: 
           SKIP_ENV_VALIDATION: true
