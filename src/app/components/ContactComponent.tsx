@@ -46,6 +46,8 @@ export default function ContactComponent() {
     });
     if (req.ok) {
       toast("Nachricht wurde erforderlich gesendet!");
+    } else if (req.status === 401) {
+      toast("Überprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.");
     }
   };
 
@@ -119,7 +121,7 @@ export default function ContactComponent() {
                 siteKey="3x00000000000000000000FF"
                 onVerify={setToken}
                 className="my-2"
-                sandbox={true}
+                sandbox="pass-invisible"
               />
               <Button type="submit" disabled={!token}>
                 Senden
