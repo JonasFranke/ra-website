@@ -1,70 +1,68 @@
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 export default function SuppliersComponent() {
+  const suppliers = [
+    {
+      src: "/resized/ado_goldkante_black.png",
+      alt: "Ado",
+      url: "https://www.ado-goldkante.de/",
+    },
+    {
+      src: "/resized/fischbacher1819_logotype_main_rgb_white.png",
+      alt: "Fischbacher",
+      url: "https://fischbacher1819.com/de/",
+    },
+    {
+      src: "/resized/teba-lifestyle-am-fenster.png",
+      alt: "Teba",
+      url: "https://www.teba.de/",
+    },
+    {
+      src: "/resized/logo-textilverlag.png",
+      alt: "GEOS",
+      url: "https://geos-geilfuss.de/",
+    },
+    {
+      src: "/resized/image001.png",
+      alt: "Sonnhaus",
+      url: "https://www.sonnhaus.de/",
+    },
+  ];
   return (
-    <section className="md:h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
+    <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
       <div className="md:flex md:flex-row py-20 p-10">
-        <div className="md:basis-1/2" />
-        <div className="md:basis-1/3">
-          <p className="text-balance">
-            Lesen Sie mehr über mich im{" "}
-            <a
-              href="http://horner-magazin.de/2019-02/"
-              className="underline underline-offset-1"
-            >
-              Horner Magazin
-            </a>{" "}
-            ab Seite 46.
-          </p>
-          <div className="dark:bg-slate-100 md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10">
-            <div className="md:w-full sm:w-1/2 h-32 p-4 relative">
-              <Image
-                src="https://www.christianfischbacher.com/ch/en/skin/frontend/digitalhome/christianfischbacher_ch_en/images/LOGO_YD_desktop.svg"
-                className="p-2"
-                alt="Fischbacher"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "fill",
-                }}
-              />
-            </div>
-            <div className="md:w-full sm:w-1/2 h-32 p-4 relative">
-              <Image
-                src="https://www.teba.de/images/teba_logo.svg"
-                className="md:w-full sm:w-1/2 p-2"
-                alt="Teba"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "contain",
-                }}
-              />
-            </div>
-            <div className="md:w-full sm:w-1/2 h-32 p-4 relative">
-              <Image
-                src="https://www.heco-textilverlag.com/themes/Frontend/SaumViebahn/frontend/_public/src/img/logos/HECO_LOGO_dunkelgrau_bronze_dunkel.png"
-                className="md:w-full sm:w-1/2 p-2"
-                alt="Heco"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "contain",
-                }}
-              />
-            </div>
-            <div className="md:w-full sm:w-1/2 h-32 p-4 relative">
-              <Image
-                src="https://www.ado-goldkante.de/typo3conf/ext/ado_goldkante/Resources/Public/Images/ado-logo.png"
-                className="md:w-full sm:w-1/2 p-2"
-                alt="Ado"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "contain",
-                }}
-              />
-            </div>
+        <div className="md:basis-1/4" />
+        <h1 className="uppercase text-gray-500 text-xl md:basis-1/4 dark:text-gray-400">
+          Meine Partner
+        </h1>
+        <div className="md:basis-1/2">
+          <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10 sm:mx-4 md:mx-2">
+            <Carousel>
+              <CarouselContent>
+                {suppliers.map((image, index) => (
+                  <CarouselItem key={index} className="dark:bg-slate-100 p-5">
+                    <a href={image.url} target="_blank">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={800}
+                        height={600}
+                        loading="lazy"
+                      />
+                    </a>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </div>
