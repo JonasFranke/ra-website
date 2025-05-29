@@ -10,27 +10,27 @@ import {
 export default function SuppliersComponent() {
   const suppliers = [
     {
-      src: "/resized/ado_goldkante_black.png",
+      src: "/ado_goldkante_black.png",
       alt: "Ado",
       url: "https://www.ado-goldkante.de/",
     },
     {
-      src: "/resized/fischbacher1819_logotype_main_rgb_white.png",
+      src: "/fischbacher1819_logotype_main_rgb_white.png",
       alt: "Fischbacher",
       url: "https://fischbacher1819.com/de/",
     },
     {
-      src: "/resized/teba-lifestyle-am-fenster.png",
+      src: "/teba-lifestyle-am-fenster.png",
       alt: "Teba",
       url: "https://www.teba.de/",
     },
     {
-      src: "/resized/logo-textilverlag.png",
+      src: "/logo-textilverlag.png",
       alt: "GEOS",
       url: "https://geos-geilfuss.de/",
     },
     {
-      src: "/resized/image001.png",
+      src: "/image001.png",
       alt: "Sonnhaus",
       url: "https://www.sonnhaus.de/",
     },
