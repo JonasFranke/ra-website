@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { useState } from "react";
-import { Dialog } from "./ui/dialog";
 import { Masonry } from "./ui/masonry";
 
 type Reference = {
@@ -10,8 +8,6 @@ type Reference = {
 };
 
 export default function ReferenceComponent() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const referenceImages: Reference[] = [
     {
       url: "/references/dekoschal.webp",
@@ -82,7 +78,6 @@ export default function ReferenceComponent() {
               height={150}
               className="mb-4 rounded-lg shadow-md"
               loading="lazy"
-              onClick={() => setIsOpen(true)}
             />
           ))}
         </Masonry>
