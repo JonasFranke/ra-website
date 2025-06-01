@@ -8,7 +8,8 @@
     "dev": "next dev --turbo",
     "lint": "biome lint",
     "start": "next start",
-    "report": "lighthouse http://127.0.0.1:3000 --view"
+    "report": "lighthouse http://127.0.0.1:3000 --view",
+    "prepare": "husky || true"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -21,7 +22,7 @@
     "geist": "^1.4.1",
     "@t3-oss/env-nextjs": "^0.13.0",
     "lucide-react": "^0.511.0",
-    "next": "15.3.2",
+    "next": "15.3.3",
     "next-themes": "^0.4.6",
     "next-turnstile": "^1.0.4",
     "react": "19.1.0",
@@ -39,10 +40,11 @@
     "@types/bun": "^1.2.11",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
-    "tailwindcss": "4.1.8",
+    "husky": "^9.1.7",
     "lighthouse": "^12.6.0",
     "postcss": "^8.5.3",
     "react-email": "4.0.15",
+    "tailwindcss": "4.1.8",
     "typescript": "^5.8.3"
   },
   "ct3aMetadata": {
