@@ -3,6 +3,11 @@
 /*
   ---break---
 */
+
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @variant dark (&:where([data-theme=dark] *));
