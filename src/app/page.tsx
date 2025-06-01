@@ -1,6 +1,7 @@
 import BackgroundComponent from "./background";
 import ContactComponent from "./components/ContactComponent";
 import DarkModeToggleButtonComponent from "./components/DarkModeToggleButton";
+import ReferenceComponent from "./components/ReferenceComponent";
 import { ScrollDownButton } from "./components/ScrollDownButton";
 import SuppliersComponent from "./components/SuppliersComponents";
 import WelcomeComponent from "./components/WelcomeComponent";
@@ -22,11 +23,14 @@ export default function HomePage() {
       </section>
       <section id="content">
         <WelcomeComponent />
-        <hr />
-        <SuppliersComponent />
-        <hr />
-        <ContactComponent />
       </section>
+      <hr />
+      <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
+        <SuppliersComponent />
+        <ReferenceComponent />
+      </section>
+      <hr />
+      <ContactComponent />
       <FooterComponent />
     </>
   );
