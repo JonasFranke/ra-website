@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -48,7 +49,7 @@ export default function SuppliersComponent() {
             <CarouselContent>
               {suppliers.map((image, index) => (
                 <CarouselItem key={index} className="dark:bg-slate-100 p-5">
-                  <a href={image.url} target="_blank">
+                  <Link href={image.url} target="_blank">
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -56,7 +57,7 @@ export default function SuppliersComponent() {
                       height={600}
                       loading="lazy"
                     />
-                  </a>
+                  </Link>
                 </CarouselItem>
               ))}
             </CarouselContent>
