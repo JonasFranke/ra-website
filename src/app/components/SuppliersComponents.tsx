@@ -8,32 +8,44 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
+type Supplier = {
+  src: string;
+  alt: string;
+  url: string;
+  id: number;
+};
+
 export default function SuppliersComponent() {
-  const suppliers = [
+  const suppliers: Supplier[] = [
     {
       src: "/ado_goldkante_black.png",
       alt: "Ado",
       url: "https://www.ado-goldkante.de/",
+      id: 1,
     },
     {
       src: "/fischbacher1819_logotype_main_rgb_white.png",
       alt: "Fischbacher",
       url: "https://fischbacher1819.com/de/",
+      id: 2,
     },
     {
       src: "/teba-lifestyle-am-fenster.png",
       alt: "Teba",
       url: "https://www.teba.de/",
+      id: 3,
     },
     {
       src: "/logo-textilverlag.png",
       alt: "GEOS",
       url: "https://geos-geilfuss.de/",
+      id: 4,
     },
     {
       src: "/image001.png",
       alt: "Sonnhaus",
       url: "https://www.sonnhaus.de/",
+      id: 5,
     },
   ];
 
