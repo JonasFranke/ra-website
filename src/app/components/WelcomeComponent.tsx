@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export default function WelcomeComponent() {
@@ -15,9 +16,9 @@ export default function WelcomeComponent() {
             Ich bin Maren Franke, Raumausstatterin seit fast 30 Jahren, und
             fertige in meinem eigenen Nähatelier alles in Handarbeit an.
           </p>
-          <Button className="my-3">
-            <a href="#contact">Kontakt aufnehmen</a>
-          </Button>
+          <Link href="#contact">
+            <Button className="my-3 cursor-pointer">Kontakt aufnehmen</Button>
+          </Link>
           <br />
           <p className="text-balance font-bold">
             Handwerkliche Perfektion – individuell und maßgefertigt
