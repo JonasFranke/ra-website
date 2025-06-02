@@ -29,7 +29,15 @@ export default function ImagePage({
       <div className="pb-5">
         <Button onClick={() => router.push("/")}>Zurück</Button>
       </div>
-      <Image src={image.src} alt={image.alt} placeholder="blur" />
+      <Image
+        src={image.src}
+        alt={image.alt}
+        placeholder="blur"
+        style={{
+          maxWidth: "100%",
+          height: "auto",
+        }}
+      />
     </section>
   );
 }

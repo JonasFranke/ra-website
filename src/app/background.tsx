@@ -11,9 +11,12 @@ function BackgroundComponent({ bgImg, children }: BackgroundProps) {
       <Image
         src={bgImg}
         alt="Background"
-        layout="fill"
-        objectFit="cover"
         priority
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       <div className="h-full flex items-end p-6">{children}</div>

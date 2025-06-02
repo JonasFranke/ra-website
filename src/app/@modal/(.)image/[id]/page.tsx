@@ -78,6 +78,10 @@ export default function ModalPage({
                         src={image.src}
                         alt={image.alt}
                         placeholder="blur"
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto",
+                        }}
                       />
                     </CarouselItem>
                   ))}

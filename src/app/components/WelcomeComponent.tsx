@@ -51,6 +51,10 @@ export default function WelcomeComponent() {
             alt="Maren Franke mit einem Stoffmuster in der Hand"
             loading="lazy"
             placeholder="blur"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
           />
           <br />
           <p className="text-balance font-bold">

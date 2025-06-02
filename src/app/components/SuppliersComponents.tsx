@@ -72,6 +72,10 @@ export default function SuppliersComponent() {
                       alt={image.alt}
                       loading="lazy"
                       placeholder="blur"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </Link>
                 </CarouselItem>
