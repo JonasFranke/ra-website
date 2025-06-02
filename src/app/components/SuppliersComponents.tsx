@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import AdoGoldkante from "#/suppliers/ado_goldkante_black.png";
+import Fischbacher1819 from "#/suppliers/fischbacher1819_logotype_main_rgb_white.png";
+import Geos from "#/suppliers/logo-textilverlag.png";
+import Sonnhaus from "#/suppliers/sonnhaus.png";
+import Teba from "#/suppliers/teba-lifestyle-am-fenster.png";
 import {
   Carousel,
   CarouselContent,
@@ -18,31 +23,31 @@ type Supplier = {
 export default function SuppliersComponent() {
   const suppliers: Supplier[] = [
     {
-      src: "/ado_goldkante_black.png",
+      src: AdoGoldkante,
       alt: "Ado",
       url: "https://www.ado-goldkante.de/",
       id: 1,
     },
     {
-      src: "/fischbacher1819_logotype_main_rgb_white.png",
+      src: Fischbacher1819,
       alt: "Fischbacher",
       url: "https://fischbacher1819.com/de/",
       id: 2,
     },
     {
-      src: "/teba-lifestyle-am-fenster.png",
+      src: Teba,
       alt: "Teba",
       url: "https://www.teba.de/",
       id: 3,
     },
     {
-      src: "/logo-textilverlag.png",
+      src: Geos,
       alt: "GEOS",
       url: "https://geos-geilfuss.de/",
       id: 4,
     },
     {
-      src: "/image001.png",
+      src: Sonnhaus,
       alt: "Sonnhaus",
       url: "https://www.sonnhaus.de/",
       id: 5,
@@ -65,9 +70,8 @@ export default function SuppliersComponent() {
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={800}
-                      height={600}
                       loading="lazy"
+                      placeholder="blur"
                     />
                   </Link>
                 </CarouselItem>
