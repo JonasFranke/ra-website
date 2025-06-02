@@ -17,7 +17,9 @@ import {
 
 export default function ModalPage({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [api, setApi] = useState<CarouselApi>();
   const router = useRouter();
@@ -34,7 +36,7 @@ export default function ModalPage({
     }
 
     api.scrollTo(+id - 2);
-  }, [api]);
+  }, [api, id]);
 
   return (
     <>
