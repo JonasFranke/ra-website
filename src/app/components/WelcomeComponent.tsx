@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MarenFranke from "#/maren-franke-quer-web.webp";
 import { Button } from "./ui/button";
 
 export default function WelcomeComponent() {
@@ -46,10 +47,10 @@ export default function WelcomeComponent() {
           </ul>
           <br />
           <Image
-            src="/maren-franke-quer-web.webp"
+            src={MarenFranke}
             alt="Maren Franke mit einem Stoffmuster in der Hand"
-            width={500}
-            height={500}
+            loading="lazy"
+            placeholder="blur"
           />
           <br />
           <p className="text-balance font-bold">

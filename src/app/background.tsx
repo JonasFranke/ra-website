@@ -1,15 +1,21 @@
+import Image, { type StaticImageData } from "next/image";
+
 type BackgroundProps = {
-  bgImgUrl: string;
+  bgImg: StaticImageData;
   children?: React.ReactNode;
 };
 
-function BackgroundComponent({ bgImgUrl, children }: BackgroundProps) {
+function BackgroundComponent({ bgImg, children }: BackgroundProps) {
   return (
-    <div
-      className={`relative h-screen bg-fixed bg-center bg-cover`}
-      style={{ backgroundImage: `url(${bgImgUrl})` }}
-    >
-      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
+    <div className="relative h-screen">
+      <Image
+        src={bgImg}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       <div className="h-full flex items-end p-6">{children}</div>
     </div>
   );

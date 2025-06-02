@@ -53,10 +53,9 @@ export default function ModalPage({
                     <CarouselItem className="basis-1/3" key={image.id}>
                       <Image
                         key={image.id}
-                        src={image.url}
+                        src={image.src}
                         alt={image.alt}
-                        width={500}
-                        height={500}
+                        placeholder="blur"
                       />
                     </CarouselItem>
                   ))}
