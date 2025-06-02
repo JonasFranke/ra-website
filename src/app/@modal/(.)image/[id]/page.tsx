@@ -38,15 +38,35 @@ export default function ModalPage({
     api.scrollTo(+id - 2);
   }, [api, id]);
 
+  useEffect(() => {
+    // focus on the first item when the modal opens
+    document.getElementById("modal")?.focus();
+  }, []);
+
   return (
     <>
       {isModalOpen &&
         createPortal(
           <div
             className="fixed inset-0 bg-gray-800/40 backdrop-blur-sm flex items-center justify-center z-50"
+            id="modal"
+            role="dialog"
+            aria-modal="true"
+            tabIndex={-1}
             onClick={closeModal}
+            onKeyDown={(e) => {
+              console.log(e.key);
+              if (e.key === "Escape") closeModal();
+            }}
           >
-            <div className="p-4 mx-8" onClick={(e) => e.stopPropagation()}>
+            {/*biome-ignore lint/a11y/noStaticElementInteractions: didn't find another tag */}
+            <div
+              className="p-4 mx-8"
+              onClick={(e) => e.stopPropagation()}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") closeModal();
+              }}
+            >
               <Carousel setApi={setApi}>
                 <CarouselPrevious />
                 <CarouselNext />
