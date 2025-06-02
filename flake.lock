@@ -2,15 +2,15 @@
   "nodes": {
     "biomepkg": {
       "locked": {
-        "lastModified": 1746012182,
-        "narHash": "sha256-SrFwe4dmOa4Xk7s9xNzDL1O6P6HEO7XbrBPs7O3ksD4=",
-        "owner": "isabelroses",
+        "lastModified": 1748853749,
+        "narHash": "sha256-Q1pSV9c0+IDoK8i6gbsYN8ffGsvZONqf9vuEtRS6JGw=",
+        "owner": "jonasfranke",
         "repo": "nixpkgs",
-        "rev": "fb80ed6efd437ac2ef2f98681d8a06c08fc5966e",
+        "rev": "354da5f323b46019a1acca5734715379b5ec5860",
         "type": "github"
       },
       "original": {
-        "owner": "isabelroses",
+        "owner": "jonasfranke",
         "ref": "biome-2",
         "repo": "nixpkgs",
         "type": "github"
@@ -18,11 +18,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1748370509,
-        "narHash": "sha256-QlL8slIgc16W5UaI3w7xHQEP+Qmv/6vSNTpoZrrSlbk=",
+        "lastModified": 1748693115,
+        "narHash": "sha256-StSrWhklmDuXT93yc3GrTlb0cKSS0agTAxMGjLKAsY8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "4faa5f5321320e49a78ae7848582f684d64783e9",
+        "rev": "910796cabe436259a29a72e8d3f5e180fc6dfacc",
         "type": "github"
       },
       "original": {
