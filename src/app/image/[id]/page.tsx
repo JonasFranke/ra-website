@@ -8,7 +8,9 @@ import { Button } from "~/app/components/ui/button";
 
 export default function ImagePage({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = use(params);
   const router = useRouter();
 

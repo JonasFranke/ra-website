@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import AdoGoldkante from "#/suppliers/ado_goldkante_black.png";
 import Fischbacher1819 from "#/suppliers/fischbacher1819_logotype_main_rgb_white.png";
@@ -14,7 +14,7 @@ import {
 } from "./ui/carousel";
 
 type Supplier = {
-  src: string;
+  src: StaticImageData;
   alt: string;
   url: string;
   id: number;
@@ -64,8 +64,8 @@ export default function SuppliersComponent() {
         <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10 sm:mx-4 md:mx-2">
           <Carousel>
             <CarouselContent>
-              {suppliers.map((image, index) => (
-                <CarouselItem key={index} className="dark:bg-slate-100 p-5">
+              {suppliers.map((image) => (
+                <CarouselItem key={image.id} className="dark:bg-slate-100 p-5">
                   <Link href={image.url} target="_blank">
                     <Image
                       src={image.src}

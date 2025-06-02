@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     });
 
     if (turnstileResult.success) {
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: "no-reply@jonasfranke.xyz",
         to: ["jfhb06@gmail.com"],
         replyTo: validatedData.email,
