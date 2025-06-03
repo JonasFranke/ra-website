@@ -2,11 +2,11 @@
   "nodes": {
     "biomepkg": {
       "locked": {
-        "lastModified": 1748853749,
+        "lastModified": 1748853985,
         "narHash": "sha256-Q1pSV9c0+IDoK8i6gbsYN8ffGsvZONqf9vuEtRS6JGw=",
         "owner": "jonasfranke",
         "repo": "nixpkgs",
-        "rev": "354da5f323b46019a1acca5734715379b5ec5860",
+        "rev": "b69b9f5dcf9bc9f32cd681b14915a3618bb5f06e",
         "type": "github"
       },
       "original": {

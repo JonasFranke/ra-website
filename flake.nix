@@ -19,6 +19,7 @@
             pkgs.bun
             pkgs.nodejs_24
             biome.biome
+            pkgs.ffmpeg
           ];
 
           shellHook = ''
