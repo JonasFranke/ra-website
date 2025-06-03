@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { use } from "react";
@@ -25,18 +26,18 @@ export default function ImagePage({
   }
 
   return (
-    <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200 p-5">
-      <div className="pb-5">
-        <Button onClick={() => router.push("/")}>Zurück</Button>
+    <section className="flex flex-row md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200 p-5">
+      <div className="pr-5">
+        <Button onClick={() => router.push("/")} className="cursor-pointer">
+          <ArrowLeft />
+          Zurück
+        </Button>
       </div>
       <Image
         src={image.src}
         alt={image.alt}
         placeholder="blur"
-        style={{
-          maxWidth: "100%",
-          height: "auto",
-        }}
+        className="h-[calc(100vh-theme(padding.10))] w-auto"
       />
     </section>
   );
