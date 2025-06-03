@@ -1,4 +1,4 @@
-import BGImg from "#/cropped-maren-franke-1-quer-web.webp";
+import BGImg from "#/maren-franke-1.webp";
 import BackgroundComponent from "./background";
 import ContactComponent from "./components/ContactComponent";
 import DarkModeToggleButtonComponent from "./components/DarkModeToggleButton";

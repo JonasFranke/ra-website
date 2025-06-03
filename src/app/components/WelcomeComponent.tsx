@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import MarenFranke from "#/maren-franke-quer-web.webp";
+import MarenFranke from "#/maren-franke-6.webp";
 import MarenFrankeZuschnitt from "#/maren-franke-zuschnitt.webp";
 import { Button } from "./ui/button";
 
@@ -52,7 +52,7 @@ export default function WelcomeComponent() {
             alt="Maren Franke mit einem Stoffmuster in der Hand"
             loading="lazy"
             placeholder="blur"
-            className="h-1/5 w-auto"
+            className="h-auto md:w-10/12 sm:w-full"
           />
           <br />
           <p className="text-balance font-bold">
@@ -71,7 +71,7 @@ export default function WelcomeComponent() {
             alt="Maren Franke bei der Arbeit im Nähatelier"
             loading="lazy"
             placeholder="blur"
-            className="h-1/5 w-auto"
+            className="h-auto md:w-10/12 sm:w-full"
           />
           <br />
           <p className="text-balance font-bold">So erreichen Sie mich</p>
