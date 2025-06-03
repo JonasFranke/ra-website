@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MarenFranke from "#/maren-franke-quer-web.webp";
+import MarenFrankeZuschnitt from "#/maren-franke-zuschnitt.webp";
 import { Button } from "./ui/button";
 
 export default function WelcomeComponent() {
@@ -51,16 +52,12 @@ export default function WelcomeComponent() {
             alt="Maren Franke mit einem Stoffmuster in der Hand"
             loading="lazy"
             placeholder="blur"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
+            className="h-1/5 w-auto"
           />
           <br />
           <p className="text-balance font-bold">
             Ich gebe Ihrem Fenster einen neuen Rahmen
           </p>
-          <br />
           <p className="text-balance">
             Ich berate Sie persönlich und individuell zu gewünschten Leistungen
             und Designs. Nach einem Aufmaß vor Ort erhalten Sie im nächsten
@@ -69,8 +66,15 @@ export default function WelcomeComponent() {
             einen zeitnahen Montagetermin.
           </p>
           <br />
-          <p className="text-balance font-bold">So erreichen Sie mich</p>
+          <Image
+            src={MarenFrankeZuschnitt}
+            alt="Maren Franke bei der Arbeit im Nähatelier"
+            loading="lazy"
+            placeholder="blur"
+            className="h-1/5 w-auto"
+          />
           <br />
+          <p className="text-balance font-bold">So erreichen Sie mich</p>
           <p className="text-balance">
             Nehmen Sie Kontakt zu mir auf – ich freue mich Ihren Fenstern einen
             neuen Look zu verpassen. Schreiben Sie mir eine Nachricht an{" "}
@@ -78,7 +82,7 @@ export default function WelcomeComponent() {
               href="mailto:info@raumausstattung-franke.com"
               className="underline underline-offset-1"
             >
-              Mail
+              info@raumausstattung-franke.com
             </a>{" "}
             mit Ihren Wünschen sowie Kontaktdaten und ich melde mich bei Ihnen.
           </p>
