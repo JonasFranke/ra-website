@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0-beta.1",
-    "@tailwindcss/postcss": "4.1.8",
+    "@tailwindcss/postcss": "4.1.10",
     "@types/bun": "^1.2.11",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
@@ -45,7 +45,7 @@
     "lint-staged": "^16.1.0",
     "postcss": "^8.5.3",
     "react-email": "4.0.16",
-    "tailwindcss": "4.1.8",
+    "tailwindcss": "4.1.10",
     "typescript": "^5.8.3"
   },
   "ct3aMetadata": {
