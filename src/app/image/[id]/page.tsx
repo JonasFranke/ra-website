@@ -7,6 +7,8 @@ import { use } from "react";
 import { referenceImages } from "~/app/components/ReferenceComponent";
 import { Button } from "~/app/components/ui/button";
 
+export const runtime = "edge";
+
 export default function ImagePage({
   params,
 }: {
