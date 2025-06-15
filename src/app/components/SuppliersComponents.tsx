@@ -1,4 +1,10 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
+import AdoGoldkante from "#/suppliers/ado_goldkante_black.png";
+import Fischbacher1819 from "#/suppliers/fischbacher1819_logotype_main_rgb_white.png";
+import Geos from "#/suppliers/logo-textilverlag.png";
+import Sonnhaus from "#/suppliers/sonnhaus.png";
+import Teba from "#/suppliers/teba-lifestyle-am-fenster.png";
 import {
   Carousel,
   CarouselContent,
@@ -7,65 +13,79 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
+type Supplier = {
+  src: StaticImageData;
+  alt: string;
+  url: string;
+  id: number;
+};
+
 export default function SuppliersComponent() {
-  const suppliers = [
+  const suppliers: Supplier[] = [
     {
-      src: "/ado_goldkante_black.png",
+      src: AdoGoldkante,
       alt: "Ado",
       url: "https://www.ado-goldkante.de/",
+      id: 1,
     },
     {
-      src: "/fischbacher1819_logotype_main_rgb_white.png",
+      src: Fischbacher1819,
       alt: "Fischbacher",
       url: "https://fischbacher1819.com/de/",
+      id: 2,
     },
     {
-      src: "/teba-lifestyle-am-fenster.png",
+      src: Teba,
       alt: "Teba",
       url: "https://www.teba.de/",
+      id: 3,
     },
     {
-      src: "/logo-textilverlag.png",
+      src: Geos,
       alt: "GEOS",
       url: "https://geos-geilfuss.de/",
+      id: 4,
     },
     {
-      src: "/image001.png",
+      src: Sonnhaus,
       alt: "Sonnhaus",
       url: "https://www.sonnhaus.de/",
+      id: 5,
     },
   ];
+
   return (
-    <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200">
-      <div className="md:flex md:flex-row py-20 p-10">
-        <div className="md:basis-1/4" />
-        <h1 className="uppercase text-gray-500 text-xl md:basis-1/4 dark:text-gray-400">
-          Meine Partner
-        </h1>
-        <div className="md:basis-1/2">
-          <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10 sm:mx-4 md:mx-2">
-            <Carousel>
-              <CarouselContent>
-                {suppliers.map((image, index) => (
-                  <CarouselItem key={index} className="dark:bg-slate-100 p-5">
-                    <a href={image.url} target="_blank">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        width={800}
-                        height={600}
-                        loading="lazy"
-                      />
-                    </a>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
+    <div className="md:flex md:flex-row py-20 p-10">
+      <div className="md:basis-1/4" />
+      <h1 className="uppercase text-gray-500 text-xl md:basis-1/4 dark:text-gray-400">
+        Meine Partner
+      </h1>
+      <div className="md:basis-1/2">
+        <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10 sm:mx-4 md:mx-2">
+          <Carousel>
+            <CarouselContent>
+              {suppliers.map((image) => (
+                <CarouselItem key={image.id} className="dark:bg-slate-100 p-5">
+                  <Link href={image.url} target="_blank">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      placeholder="blur"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

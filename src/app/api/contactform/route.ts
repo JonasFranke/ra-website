@@ -4,6 +4,8 @@ import { z } from "zod";
 import { EmailTemplate } from "~/app/components/emails/EmailTemplate";
 import { env } from "~/env";
 
+export const runtime = "edge";
+
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
@@ -30,7 +32,7 @@ export async function POST(request: Request) {
     });
 
     if (turnstileResult.success) {
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: "no-reply@jonasfranke.xyz",
         to: ["jfhb06@gmail.com"],
         replyTo: validatedData.email,
