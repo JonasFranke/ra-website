@@ -15,6 +15,8 @@ import {
   CarouselPrevious,
 } from "~/app/components/ui/carousel";
 
+export const runtime = "edge";
+
 export default function ModalPage({
   params,
 }: {

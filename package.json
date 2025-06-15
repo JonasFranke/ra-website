@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "next build",
+    "pages:build": "bunx @cloudflare/next-on-pages",
+    "preview": "bun run pages:build && wrangler pages dev",
+    "deploy": "bun run pages:build && wrangler pages deploy",
     "dev": "next dev --turbo",
     "lint": "biome lint",
     "start": "next start",
@@ -36,6 +39,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0-beta.1",
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@tailwindcss/postcss": "4.1.10",
     "@types/bun": "^1.2.11",
     "@types/react": "npm:types-react@19.0.0-rc.1",
