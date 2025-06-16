@@ -18,8 +18,10 @@ export default function WelcomeComponent() {
             Ich bin Maren Franke, Raumausstatterin seit fast 30 Jahren, und
             fertige in meinem eigenen Nähatelier alles in Handarbeit an.
           </p>
-          <Link href="#contact">
-            <Button className="my-3 cursor-pointer">Kontakt aufnehmen</Button>
+          <Link href="#contact" aria-labelledby="contactbutton">
+            <Button className="my-3 cursor-pointer" id="contactbutton">
+              Kontakt aufnehmen
+            </Button>
           </Link>
           <br />
           <p className="text-balance font-bold">
@@ -33,16 +35,17 @@ export default function WelcomeComponent() {
           </p>
           <br />
           <p className="text-balance font-bold">Meine Produktpalette</p>
-          <br />
           <ul className="text-balance list-disc">
-            <li>Sicht- und Sonnenschutz:</li>
-            <ul className="list-disc pl-5">
-              <li>Plissées</li>
-              <li>Rollos</li>
-              <li>Flächenvorhänge</li>
-              <li>Vertikallamellen</li>
-              <li>Jalousien</li>
-            </ul>
+            <li>
+              Sicht- und Sonnenschutz:
+              <ul className="list-disc pl-5">
+                <li>Plissées</li>
+                <li>Rollos</li>
+                <li>Flächenvorhänge</li>
+                <li>Vertikallamellen</li>
+                <li>Jalousien</li>
+              </ul>
+            </li>
             <li>Gardinenstangen- und Schienen</li>
             <li>Stoffkollektionen namhafter Hersteller</li>
           </ul>

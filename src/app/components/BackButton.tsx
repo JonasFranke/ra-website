@@ -7,9 +7,13 @@ import { Button } from "~/app/components/ui/button";
 export default function BackButton() {
   const router = useRouter();
   return (
-    <Button onClick={() => router.push("/")} className="cursor-pointer">
+    <Button
+      onClick={() => router.push("/")}
+      className="cursor-pointer"
+      aria-labelledby="backtext"
+    >
       <ArrowLeft />
-      Zurück
+      <span id="backtext">Zurück</span>
     </Button>
   );
 }
