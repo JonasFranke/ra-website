@@ -12,6 +12,7 @@ function BackgroundComponent({ bgImg, children }: BackgroundProps) {
         src={bgImg}
         alt="Background"
         priority
+        placeholder="blur"
         fill
         sizes="100vw"
         style={{
