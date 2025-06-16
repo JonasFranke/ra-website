@@ -35,16 +35,17 @@ export default function WelcomeComponent() {
           </p>
           <br />
           <p className="text-balance font-bold">Meine Produktpalette</p>
-          <br />
           <ul className="text-balance list-disc">
-            <li>Sicht- und Sonnenschutz:</li>
-            <ul className="list-disc pl-5">
-              <li>Plissées</li>
-              <li>Rollos</li>
-              <li>Flächenvorhänge</li>
-              <li>Vertikallamellen</li>
-              <li>Jalousien</li>
-            </ul>
+            <li>
+              Sicht- und Sonnenschutz:
+              <ul className="list-disc pl-5">
+                <li>Plissées</li>
+                <li>Rollos</li>
+                <li>Flächenvorhänge</li>
+                <li>Vertikallamellen</li>
+                <li>Jalousien</li>
+              </ul>
+            </li>
             <li>Gardinenstangen- und Schienen</li>
             <li>Stoffkollektionen namhafter Hersteller</li>
           </ul>
