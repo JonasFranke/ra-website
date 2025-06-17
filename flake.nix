@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    biomepkg.url = "github:jonasfranke/nixpkgs/biome-2";
+    biomepkg.url = "github:isabelroses/nixpkgs/biome-2";
   };
 
   outputs = { self, nixpkgs, biomepkg, ... }@inputs: 
