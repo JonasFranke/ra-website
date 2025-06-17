@@ -60,8 +60,8 @@ export default function SuppliersComponent() {
       <h1 className="uppercase text-gray-500 text-xl md:basis-1/4 dark:text-gray-400">
         Meine Partner
       </h1>
-      <div className="md:basis-1/2">
-        <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center sm:flex sm:flex-col sm:justify-between pt-10 sm:mx-4 md:mx-2">
+      <div className="md:basis-1/2 p-5 md:p-0">
+        <div className="md:grid md:grid-flow-row-dense gap-4 md:grid-cols-2 md:items-center flex flex-col justify-between pt-10 mx-4 md:mx-2">
           <Carousel>
             <CarouselContent>
               {suppliers.map((image) => (
