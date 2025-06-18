@@ -22,7 +22,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "geist": "^1.4.1",
-    "lucide-react": "^0.516.0",
+    "lucide-react": "^0.517.0",
     "next": "15.3.3",
     "next-themes": "^0.4.6",
     "next-turnstile": "^1.0.4",
@@ -37,7 +37,7 @@
     "zod": "^3.24.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.0-beta.6",
+    "@biomejs/biome": "2.0.0",
     "@cloudflare/next-on-pages": "^1.13.12",
     "@tailwindcss/postcss": "4.1.10",
     "@types/bun": "^1.2.11",
