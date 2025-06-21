@@ -13,7 +13,7 @@ export default function WelcomeComponent() {
           Alles aus einer Hand – vom Aufmaß bis zur fertigen Dekoration Ihres
           Fensters
         </h1>
-        <div className="md:basis-1/2">
+        <div className="md:basis-1/2 mt-3 md:mt-0">
           <p className="text-balance">
             Ich bin Maren Franke, Raumausstatterin seit fast 30 Jahren, und
             fertige in meinem eigenen Nähatelier alles in Handarbeit an.

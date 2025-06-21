@@ -13,7 +13,7 @@ export default function DarkModeToggleButtonComponent() {
 
   return (
     <button
-      className="fixed bottom-4 right-4 z-50 m-4 p-4 border-black rounded-lg bg-gray-400 cursor-pointer"
+      className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 p-4 border-black rounded-lg bg-gray-400 cursor-pointer"
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
       type="button"
       aria-label="Dunkler Modus umschalten"
