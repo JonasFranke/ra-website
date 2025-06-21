@@ -1,28 +1,12 @@
 {
   "nodes": {
-    "biomepkg": {
-      "locked": {
-        "lastModified": 1748853985,
-        "narHash": "sha256-Q1pSV9c0+IDoK8i6gbsYN8ffGsvZONqf9vuEtRS6JGw=",
-        "owner": "jonasfranke",
-        "repo": "nixpkgs",
-        "rev": "b69b9f5dcf9bc9f32cd681b14915a3618bb5f06e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jonasfranke",
-        "ref": "biome-2",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1749285348,
-        "narHash": "sha256-frdhQvPbmDYaScPFiCnfdh3B/Vh81Uuoo0w5TkWmmjU=",
+        "lastModified": 1750134718,
+        "narHash": "sha256-v263g4GbxXv87hMXMCpjkIxd/viIF7p3JpJrwgKdNiI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3e3afe5174c561dee0df6f2c2b2236990146329f",
+        "rev": "9e83b64f727c88a7711a2c463a7b16eedb69a84c",
         "type": "github"
       },
       "original": {
@@ -34,7 +18,6 @@
     },
     "root": {
       "inputs": {
-        "biomepkg": "biomepkg",
         "nixpkgs": "nixpkgs"
       }
     }
