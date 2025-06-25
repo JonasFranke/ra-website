@@ -47,7 +47,7 @@
     "lighthouse": "^12.6.0",
     "lint-staged": "^16.1.0",
     "postcss": "^8.5.3",
-    "react-email": "4.0.16",
+    "react-email": "4.0.17",
     "tailwindcss": "4.1.10",
     "typescript": "^5.8.3"
   },
