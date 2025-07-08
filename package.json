@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
-    "@react-email/components": "^0.1.0",
+    "@react-email/components": "^0.2.0",
     "@t3-oss/env-nextjs": "^0.13.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -37,7 +37,7 @@
     "zod": "^3.24.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.0",
+    "@biomejs/biome": "2.1.1",
     "@cloudflare/next-on-pages": "^1.13.12",
     "@tailwindcss/postcss": "4.1.11",
     "@types/bun": "^1.2.11",
@@ -47,7 +47,7 @@
     "lighthouse": "^12.6.0",
     "lint-staged": "^16.1.0",
     "postcss": "^8.5.3",
-    "react-email": "4.0.17",
+    "react-email": "4.1.0",
     "tailwindcss": "4.1.11",
     "typescript": "^5.8.3"
   },
