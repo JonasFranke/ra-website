@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - uses: mongolyy/reviewdog-action-biome@v1
+      - uses: mongolyy/reviewdog-action-biome@v2
 
         with:
 
