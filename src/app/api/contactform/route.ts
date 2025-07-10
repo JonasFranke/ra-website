@@ -9,12 +9,12 @@ export const runtime = "edge";
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
-  name: z.string().min(1, { message: "Name ist erforderlich" }),
-  email: z.string().email({ message: "Ungültige E-Mail-Adresse" }),
+  name: z.string().min(1, { error: "Name ist erforderlich" }),
+  email: z.string().email({ error: "Ungültige E-Mail-Adresse" }),
   message: z
     .string()
-    .min(1, { message: "Nachricht ist erforderlich" })
-    .max(512, { message: "Nachricht darf maximal 512 Zeichen lang sein" }),
+    .min(1, { error: "Nachricht ist erforderlich" })
+    .max(512, { error: "Nachricht darf maximal 512 Zeichen lang sein" }),
   token: z.string(),
 });
 
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return new Response(JSON.stringify({ message: error.errors }), {
+      return new Response(JSON.stringify({ message: error.issues }), {
         status: 422,
       });
     }
