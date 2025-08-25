@@ -1,3 +1,4 @@
+import type { Route } from "next";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import AdoGoldkante from "#/suppliers/ado_goldkante_black.png";
@@ -66,7 +67,7 @@ export default function SuppliersComponent() {
             <CarouselContent>
               {suppliers.map((image) => (
                 <CarouselItem key={image.id} className="dark:bg-slate-100 p-5">
-                  <Link href={image.url} target="_blank">
+                  <Link href={image.url as Route} target="_blank">
                     <Image
                       src={image.src}
                       alt={image.alt}
