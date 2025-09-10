@@ -37,7 +37,7 @@
     "zod": "^4.1.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.3",
+    "@biomejs/biome": "2.2.4",
     "@cloudflare/next-on-pages": "^1.13.12",
     "@tailwindcss/postcss": "4.1.13",
     "@types/bun": "^1.2.20",
