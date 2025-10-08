@@ -20,5 +20,8 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "ra-web"
     }
-  ]
+  ],
+  "placement": {
+    "mode": "smart"
+  }
 }
