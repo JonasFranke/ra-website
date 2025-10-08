@@ -4,8 +4,6 @@ import { z } from "zod";
 import { EmailTemplate } from "~/app/components/emails/EmailTemplate";
 import { env } from "~/env";
 
-export const runtime = "edge";
-
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
