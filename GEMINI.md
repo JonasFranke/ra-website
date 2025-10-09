@@ -7,10 +7,7 @@ This is a website for a German interior design business called "Raumausstattung 
 *   **Next.js:** A React framework for building server-side rendered and static websites.
 *   **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
 *   **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
-*   **tRPC:** A typesafe API layer for Next.js.
-*   **NextAuth.js:** Authentication for Next.js.
-*   **Prisma:** A modern database toolkit.
-*   **Drizzle:** A TypeScript ORM.
+*   **ShadCN:** A component library built on top of Radix UI and Tailwind CSS.
 
 The website features a dark mode, a contact form with captcha verification, and a gallery of references.
 
