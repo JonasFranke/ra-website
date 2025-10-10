@@ -44,7 +44,7 @@
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
     "husky": "^9.1.7",
-    "lighthouse": "^12.6.0",
+    "lighthouse": "^13.0.0",
     "lint-staged": "^16.1.5",
     "postcss": "^8.5.6",
     "react-email": "4.3.0",
