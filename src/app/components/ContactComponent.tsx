@@ -14,7 +14,7 @@ import { Textarea } from "./ui/textarea";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Name ist erforderlich" }),
-  email: z.string().email({ message: "Ungültige E-Mail-Adresse" }),
+  email: z.email({ message: "Ungültige E-Mail-Adresse" }),
   message: z
     .string()
     .min(1, { message: "Nachricht ist erforderlich" })
