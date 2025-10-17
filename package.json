@@ -15,6 +15,7 @@
     "prepare": "husky || true"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^12.2.0",
     "@hookform/resolvers": "^5.2.1",
     "@opennextjs/cloudflare": "^1.9.1",
     "@react-email/components": "^0.5.1",
