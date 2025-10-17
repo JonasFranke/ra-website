@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { FC } from "react";
 
 const FooterComponent: FC = () => {
@@ -23,8 +24,14 @@ const FooterComponent: FC = () => {
         </p>
       </div>
       <div className="md:basis-1/5">
-        <h1 className="uppercase font-mono">Datenschutz</h1>
-        <p>TODO: Datenschutzlink</p>
+        <h1 className="uppercase font-mono">Impressum / Datenschutz</h1>
+        <Link href="/impressum" className="underline text-blue-600">
+          Impressum
+        </Link>
+        <br />
+        <Link href="/privacy" className="underline text-blue-600">
+          Datenschutz
+        </Link>
       </div>
       <div className="md:basis-1/5" />
     </footer>

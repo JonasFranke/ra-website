@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import MarenFranke from "#/maren-franke-6.webp";
+import MarenFrankeZuschnitt from "#/maren-franke-zuschnitt.webp";
 import { Button } from "./ui/button";
 
 export default function WelcomeComponent() {
@@ -16,8 +18,10 @@ export default function WelcomeComponent() {
             Ich bin Maren Franke, Raumausstatterin seit fast 30 Jahren, und
             fertige in meinem eigenen Nähatelier alles in Handarbeit an.
           </p>
-          <Link href="#contact">
-            <Button className="my-3 cursor-pointer">Kontakt aufnehmen</Button>
+          <Link href="#contact" aria-labelledby="contactbutton">
+            <Button className="my-3 cursor-pointer" id="contactbutton">
+              Kontakt aufnehmen
+            </Button>
           </Link>
           <br />
           <p className="text-balance font-bold">
@@ -31,31 +35,32 @@ export default function WelcomeComponent() {
           </p>
           <br />
           <p className="text-balance font-bold">Meine Produktpalette</p>
-          <br />
           <ul className="text-balance list-disc">
-            <li>Sicht- und Sonnenschutz:</li>
-            <ul className="list-disc pl-5">
-              <li>Plissées</li>
-              <li>Rollos</li>
-              <li>Flächenvorhänge</li>
-              <li>Vertikallamellen</li>
-              <li>Jalousien</li>
-            </ul>
+            <li>
+              Sicht- und Sonnenschutz:
+              <ul className="list-disc pl-5">
+                <li>Plissées</li>
+                <li>Rollos</li>
+                <li>Flächenvorhänge</li>
+                <li>Vertikallamellen</li>
+                <li>Jalousien</li>
+              </ul>
+            </li>
             <li>Gardinenstangen- und Schienen</li>
             <li>Stoffkollektionen namhafter Hersteller</li>
           </ul>
           <br />
           <Image
-            src="/maren-franke-quer-web.webp"
+            src={MarenFranke}
             alt="Maren Franke mit einem Stoffmuster in der Hand"
-            width={500}
-            height={500}
+            loading="lazy"
+            placeholder="blur"
+            className="h-auto md:w-10/12 sm:w-full"
           />
           <br />
           <p className="text-balance font-bold">
             Ich gebe Ihrem Fenster einen neuen Rahmen
           </p>
-          <br />
           <p className="text-balance">
             Ich berate Sie persönlich und individuell zu gewünschten Leistungen
             und Designs. Nach einem Aufmaß vor Ort erhalten Sie im nächsten
@@ -64,8 +69,15 @@ export default function WelcomeComponent() {
             einen zeitnahen Montagetermin.
           </p>
           <br />
-          <p className="text-balance font-bold">So erreichen Sie mich</p>
+          <Image
+            src={MarenFrankeZuschnitt}
+            alt="Maren Franke bei der Arbeit im Nähatelier"
+            loading="lazy"
+            placeholder="blur"
+            className="h-auto md:w-10/12 sm:w-full"
+          />
           <br />
+          <p className="text-balance font-bold">So erreichen Sie mich</p>
           <p className="text-balance">
             Nehmen Sie Kontakt zu mir auf – ich freue mich Ihren Fenstern einen
             neuen Look zu verpassen. Schreiben Sie mir eine Nachricht an{" "}
@@ -73,7 +85,7 @@ export default function WelcomeComponent() {
               href="mailto:info@raumausstattung-franke.com"
               className="underline underline-offset-1"
             >
-              Mail
+              info@raumausstattung-franke.com
             </a>{" "}
             mit Ihren Wünschen sowie Kontaktdaten und ich melde mich bei Ihnen.
           </p>

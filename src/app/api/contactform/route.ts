@@ -7,12 +7,12 @@ import { env } from "~/env";
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
-  name: z.string().min(1, { message: "Name ist erforderlich" }),
-  email: z.string().email({ message: "Ungültige E-Mail-Adresse" }),
+  name: z.string().min(1, { error: "Name ist erforderlich" }),
+  email: z.email({ error: "Ungültige E-Mail-Adresse" }),
   message: z
     .string()
-    .min(1, { message: "Nachricht ist erforderlich" })
-    .max(512, { message: "Nachricht darf maximal 512 Zeichen lang sein" }),
+    .min(1, { error: "Nachricht ist erforderlich" })
+    .max(512, { error: "Nachricht darf maximal 512 Zeichen lang sein" }),
   token: z.string(),
 });
 
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     });
 
     if (turnstileResult.success) {
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: "no-reply@jonasfranke.xyz",
         to: ["jfhb06@gmail.com"],
         replyTo: validatedData.email,
@@ -53,9 +53,10 @@ export async function POST(request: Request) {
     }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return new Response(JSON.stringify({ message: error.errors }), {
+      return new Response(JSON.stringify({ message: error.issues }), {
         status: 422,
       });
     }
   }
+  return new Response("Internal Server Error", { status: 500 });
 }

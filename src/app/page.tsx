@@ -1,3 +1,4 @@
+import BGImg from "#/maren-franke-1.webp";
 import BackgroundComponent from "./background";
 import ContactComponent from "./components/ContactComponent";
 import DarkModeToggleButtonComponent from "./components/DarkModeToggleButton";
@@ -12,7 +13,7 @@ export default function HomePage() {
     <>
       <DarkModeToggleButtonComponent />
       <section className="relative min-h-screen">
-        <BackgroundComponent bgImgUrl="/cropped-maren-franke-1-quer-web.webp">
+        <BackgroundComponent bgImg={BGImg}>
           <h1 className="text-white text-5xl drop-shadow-lg uppercase hyphens-manual">
             Raumaus&shy;stattung Franke
           </h1>

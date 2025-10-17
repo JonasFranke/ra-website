@@ -1,16 +1,14 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { use } from "react";
+import BackButton from "~/app/components/BackButton";
 import { referenceImages } from "~/app/components/ReferenceComponent";
-import { Button } from "~/app/components/ui/button";
 
 export default function ImagePage({
   params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = use(params);
-  const router = useRouter();
 
   const image = referenceImages.find((image) => image.id === +id);
 
@@ -23,11 +21,16 @@ export default function ImagePage({
   }
 
   return (
-    <section className="md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200 p-5">
-      <div className="pb-5">
-        <Button onClick={() => router.push("/")}>Zurück</Button>
+    <section className="flex flex-row md:min-h-screen sm:h-min bg-white dark:bg-slate-800 dark:text-gray-200 p-5">
+      <div className="pr-5">
+        <BackButton />
       </div>
-      <Image src={image.url} alt={image.url} width={500} height={500} />
+      <Image
+        src={image.src}
+        alt={image.alt}
+        placeholder="blur"
+        className="h-[calc(100vh-theme(padding.10))] w-auto"
+      />
     </section>
   );
 }

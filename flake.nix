@@ -13,14 +13,15 @@
     {
 
       devShells.x86_64-linux.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            bun
-            nodejs_24
-            ffmpeg
+          nativeBuildInputs = [
+            pkgs.bun
+            pkgs.nodejs_24
+            pkgs.biome
+            pkgs.ffmpeg
           ];
 
           shellHook = ''
-            echo "Bun $(bun --version) is ready!" && 
+            echo "Bun $(bun --version) and Biome $(biome --version) are ready!" &&
             export BIOME_BINARY=$(which biome)
           '';
         };

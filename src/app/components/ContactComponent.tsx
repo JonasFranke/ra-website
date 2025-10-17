@@ -14,7 +14,7 @@ import { Textarea } from "./ui/textarea";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Name ist erforderlich" }),
-  email: z.string().email({ message: "Ungültige E-Mail-Adresse" }),
+  email: z.email({ message: "Ungültige E-Mail-Adresse" }),
   message: z
     .string()
     .min(1, { message: "Nachricht ist erforderlich" })
@@ -118,7 +118,7 @@ export default function ContactComponent() {
                 />
               </div>
               <Turnstile
-                siteKey="3x00000000000000000000FF"
+                siteKey="0x4AAAAAABhG8GmDLHRYUnDk"
                 onVerify={setToken}
                 className="my-2"
                 sandbox={
