@@ -6,8 +6,8 @@
   "scripts": {
     "build": "next build",
     "pages:build": "opennextjs-cloudflare",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "opennextjs-cloudflare build && wrangler versions upload",
+    "deploy": "opennextjs-cloudflare build && wrangler deploy",
     "dev": "next dev --turbo",
     "lint": "biome lint",
     "start": "next start",
