@@ -35,7 +35,7 @@ export async function POST(request: Request) {
         to: ["jfhb06@gmail.com"],
         replyTo: validatedData.email,
         subject: "Anfrage auf der Website",
-        react: EmailTemplate({
+        react: await EmailTemplate({
           name: validatedData.name,
           message: validatedData.message,
         }),
