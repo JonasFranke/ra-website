@@ -17,7 +17,7 @@
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
     "@opennextjs/cloudflare": "^1.9.1",
-    "@react-email/components": "^0.5.1",
+    "@react-email/components": "^1.0.0",
     "@t3-oss/env-nextjs": "^0.13.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -47,7 +47,7 @@
     "lighthouse": "^13.0.0",
     "lint-staged": "^16.1.5",
     "postcss": "^8.5.6",
-    "react-email": "4.3.2",
+    "react-email": "5.2.8",
     "tailwindcss": "4.2.0",
     "typescript": "^5.9.2",
     "wrangler": "^4.42.1"
