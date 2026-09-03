@@ -3,28 +3,42 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
+  outputs =
+    inputs@{ nixpkgs, flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
 
-      devShells.x86_64-linux.default = pkgs.mkShell {
-          nativeBuildInputs = [
-            pkgs.bun
-            pkgs.nodejs_24
-            pkgs.biome
-            pkgs.ffmpeg
-          ];
+      perSystem =
+        { pkgs, ... }:
+        {
+          devShells.default = pkgs.mkShell {
+            nativeBuildInputs = with pkgs; [
+              bun
+              nodejs_24
+              biome
+              ffmpeg
+            ];
 
-          shellHook = ''
-            echo "Bun $(bun --version) and Biome $(biome --version) are ready!" &&
-            export BIOME_BINARY=$(which biome)
-          '';
+            shellHook = ''
+              echo "Bun $(bun --version) and Biome $(biome --version) are ready!" &&
+              export BIOME_BINARY=$(which biome)
+            '';
+          };
+
+          formatter = pkgs.writeShellApplication {
+            name = "treefmt";
+            runtimeInputs = with pkgs; [
+              treefmt
+              nixfmt
+              biome
+            ];
+            text = ''
+              treefmt "$@"
+            '';
+          };
         };
-
     };
 }
