@@ -67,7 +67,11 @@ export default function SuppliersComponent() {
             <CarouselContent>
               {suppliers.map((image) => (
                 <CarouselItem key={image.id} className="dark:bg-slate-100 p-5">
-                  <Link href={image.url as Route} target="_blank">
+                  <Link
+                    href={image.url as Route}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src={image.src}
                       alt={image.alt}

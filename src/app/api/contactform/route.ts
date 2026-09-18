@@ -7,8 +7,13 @@ import { env } from "~/env";
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
-  name: z.string().min(1, { error: "Name ist erforderlich" }),
-  email: z.email({ error: "Ungültige E-Mail-Adresse" }),
+  name: z
+    .string()
+    .min(1, { error: "Name ist erforderlich" })
+    .max(100, { error: "Name darf maximal 100 Zeichen lang sein" }),
+  email: z
+    .email({ error: "Ungültige E-Mail-Adresse" })
+    .max(254, { error: "E-Mail-Adresse zu lang" }),
   message: z
     .string()
     .min(1, { error: "Nachricht ist erforderlich" })

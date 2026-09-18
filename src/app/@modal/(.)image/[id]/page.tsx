@@ -55,7 +55,6 @@ export default function ModalPage({
             tabIndex={-1}
             onClick={closeModal}
             onKeyDown={(e) => {
-              console.log(e.key);
               if (e.key === "Escape") closeModal();
             }}
           >
