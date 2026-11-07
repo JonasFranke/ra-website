@@ -4,10 +4,10 @@
 
 This is a website for a German interior design business called "Raumausstattung Franke". It is a modern, single-page application built with the T3 Stack, which includes:
 
-*   **Next.js:** A React framework for building server-side rendered and static websites.
-*   **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
-*   **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
-*   **ShadCN:** A component library built on top of Radix UI and Tailwind CSS.
+-   **Next.js:** A React framework for building server-side rendered and static websites.
+-   **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+-   **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
+-   **ShadCN:** A component library built on top of Radix UI and Tailwind CSS.
 
 The website features a dark mode, a contact form with captcha verification, and a gallery of references.
 
@@ -15,8 +15,8 @@ The website features a dark mode, a contact form with captcha verification, and 
 
 ### Prerequisites
 
-*   [Bun](https://bun.sh/)
-*   [Node.js](https://nodejs.org/)
+-   [Bun](https://bun.sh/)
+-   [Node.js](https://nodejs.org/)
 
 ### Installation
 
@@ -52,9 +52,9 @@ bun run lint
 
 ## Development Conventions
 
-*   **Components:** Reusable UI components are located in the `src/app/components` directory.
-*   **Styling:** The project uses Tailwind CSS for styling. Global styles are defined in `src/styles/globals.css`.
-*   **API Routes:** API routes are located in the `src/app/api` directory.
-*   **Contact Form:** The contact form is implemented in the `src/app/components/ContactComponent.tsx` file and the corresponding API route is at `src/app/api/contactform/route.ts`.
-*   **Email:** The project uses `resend` to send emails. The email template is located at `src/app/components/emails/EmailTemplate.tsx`.
-*   **Environment Variables:** The project uses `t3-env` to manage environment variables. The environment variable definitions are in `src/env.js`.
+-   **Components:** Reusable UI components are located in the `src/app/components` directory.
+-   **Styling:** The project uses Tailwind CSS for styling. Global styles are defined in `src/styles/globals.css`.
+-   **API Routes:** API routes are located in the `src/app/api` directory.
+-   **Contact Form:** The contact form is implemented in the `src/app/components/ContactComponent.tsx` file and the corresponding API route is at `src/app/api/contactform/route.ts`.
+-   **Email:** The project uses `resend` to send emails. The email template is located at `src/app/components/emails/EmailTemplate.tsx`.
+-   **Environment Variables:** The project uses `t3-env` to manage environment variables. The environment variable definitions are in `src/env.js`.
