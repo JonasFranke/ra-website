@@ -54,6 +54,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
+  reactCompiler: true,
   async headers() {
     return [
       {
