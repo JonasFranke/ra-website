@@ -15,7 +15,7 @@
     "prepare": "husky || true"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^12.2.0",
+    "@icons-pack/react-simple-icons": "^13.0.0",
     "@radix-ui/react-label": "^2.1.4",
     "@radix-ui/react-slot": "^1.2.0",
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
