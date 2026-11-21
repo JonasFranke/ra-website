@@ -80,9 +80,16 @@ export default function PrivacyPage() {
 
         <p>
           Die Europäische Kommission stellt eine Plattform zur
-          Online-Streitbeilegung (OS) bereit:
-          https://ec.europa.eu/consumers/odr. Unsere E-Mail-Adresse findest du
-          oben im Impressum.
+          Online-Streitbeilegung (OS) bereit:{" "}
+          <a
+            href="https://ec.europa.eu/consumers/odr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-600"
+          >
+            https://ec.europa.eu/consumers/odr
+          </a>
+          . Unsere E-Mail-Adresse findest du oben im Impressum.
         </p>
       </section>
     </>

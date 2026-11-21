@@ -13,8 +13,13 @@ import { Toaster } from "./ui/sonner";
 import { Textarea } from "./ui/textarea";
 
 const contactSchema = z.object({
-  name: z.string().min(1, { message: "Name ist erforderlich" }),
-  email: z.email({ message: "Ungültige E-Mail-Adresse" }),
+  name: z
+    .string()
+    .min(1, { message: "Name ist erforderlich" })
+    .max(100, { message: "Name darf maximal 100 Zeichen lang sein" }),
+  email: z
+    .email({ message: "Ungültige E-Mail-Adresse" })
+    .max(254, { message: "E-Mail-Adresse zu lang" }),
   message: z
     .string()
     .min(1, { message: "Nachricht ist erforderlich" })
@@ -36,7 +41,7 @@ export default function ContactComponent() {
 
   const onSubmit = async (data: ContactFormValues) => {
     const dataWithToken = { ...data, token };
-    console.log("Form submitted:", dataWithToken);
+
     const req = await fetch("/api/contactform", {
       method: "POST",
       headers: {
