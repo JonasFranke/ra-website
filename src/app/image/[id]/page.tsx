@@ -3,8 +3,6 @@ import { use } from "react";
 import BackButton from "~/app/components/BackButton";
 import { referenceImages } from "~/app/components/ReferenceComponent";
 
-export const runtime = "edge";
-
 export default function ImagePage({
   params,
 }: {

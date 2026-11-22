@@ -4,17 +4,20 @@ import { z } from "zod";
 import { EmailTemplate } from "~/app/components/emails/EmailTemplate";
 import { env } from "~/env";
 
-export const runtime = "edge";
-
 const resend = new Resend(env.RESEND_API_KEY);
 
 const contactSchema = z.object({
-  name: z.string().min(1, { message: "Name ist erforderlich" }),
-  email: z.string().email({ message: "Ungültige E-Mail-Adresse" }),
+  name: z
+    .string()
+    .min(1, { error: "Name ist erforderlich" })
+    .max(100, { error: "Name darf maximal 100 Zeichen lang sein" }),
+  email: z
+    .email({ error: "Ungültige E-Mail-Adresse" })
+    .max(254, { error: "E-Mail-Adresse zu lang" }),
   message: z
     .string()
-    .min(1, { message: "Nachricht ist erforderlich" })
-    .max(512, { message: "Nachricht darf maximal 512 Zeichen lang sein" }),
+    .min(1, { error: "Nachricht ist erforderlich" })
+    .max(512, { error: "Nachricht darf maximal 512 Zeichen lang sein" }),
   token: z.string(),
 });
 
@@ -37,7 +40,7 @@ export async function POST(request: Request) {
         to: ["jfhb06@gmail.com"],
         replyTo: validatedData.email,
         subject: "Anfrage auf der Website",
-        react: EmailTemplate({
+        react: await EmailTemplate({
           name: validatedData.name,
           message: validatedData.message,
         }),
@@ -55,9 +58,10 @@ export async function POST(request: Request) {
     }
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return new Response(JSON.stringify({ message: error.errors }), {
+      return new Response(JSON.stringify({ message: error.issues }), {
         status: 422,
       });
     }
   }
+  return new Response("Internal Server Error", { status: 500 });
 }

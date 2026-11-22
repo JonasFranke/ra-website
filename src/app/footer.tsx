@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { FC } from "react";
+import InstaLinkComponent from "./components/InstaLinkComponent";
 
 const FooterComponent: FC = () => {
   return (

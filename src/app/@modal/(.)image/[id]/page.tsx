@@ -15,8 +15,6 @@ import {
   CarouselPrevious,
 } from "~/app/components/ui/carousel";
 
-export const runtime = "edge";
-
 export default function ModalPage({
   params,
 }: {
@@ -57,7 +55,6 @@ export default function ModalPage({
             tabIndex={-1}
             onClick={closeModal}
             onKeyDown={(e) => {
-              console.log(e.key);
               if (e.key === "Escape") closeModal();
             }}
           >
