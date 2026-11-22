@@ -66,12 +66,17 @@ export default function ModalPage({
                 if (e.key === "Escape") closeModal();
               }}
             >
+              <div className="m-1 ml-0">
+                <Button type="button" onClick={closeModal}>
+                  Zurück
+                </Button>
+              </div>
               <Carousel setApi={setApi}>
                 <CarouselPrevious />
                 <CarouselNext />
                 <CarouselContent>
                   {referenceImages.map((image) => (
-                    <CarouselItem className="basis-1/3" key={image.id}>
+                    <CarouselItem className="md:basis-1/3" key={image.id}>
                       <Image
                         key={image.id}
                         src={image.src}
@@ -86,11 +91,6 @@ export default function ModalPage({
                   ))}
                 </CarouselContent>
               </Carousel>
-              <div className="m-1">
-                <Button type="button" onClick={closeModal}>
-                  Zurück
-                </Button>
-              </div>
             </div>
           </div>,
           document.body,
